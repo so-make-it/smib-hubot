@@ -1,2 +1,2 @@
 . ./env
-bin/hubot -a irc -n yoshibot --alias '!'
+bin/hubot -a irc2 -n yoshibot --alias '!'
