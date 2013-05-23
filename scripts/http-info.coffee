@@ -51,10 +51,10 @@ module.exports = (robot) ->
             text = $('title').text()
             if text
               description = $('meta[name=description]').attr("content") || ""
-              if title.toLowerCase().replace(/[^a-z]/g, "") is description.toLowerCase().replace(/[^a-z]/g, "")
+              if text.toLowerCase().replace(/[^a-z]/g, "") is description.toLowerCase().replace(/[^a-z]/g, "")
                 description = ""
               text = text + " | " + description if description.length
-              text = text.replace(/[\r\n\t]*/g, " ")
+              text = text.replace(/[\r\n\t]+/g, " ")
               text = text.replace(/\s+/g, " ")
 
               msg.send text
