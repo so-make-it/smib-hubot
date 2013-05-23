@@ -61,7 +61,11 @@ module.exports = (robot) ->
       if cmds.length == 0
         msg.send "No available commands match #{msg.match[1]}"
         return
-    emit = cmds.join "\n"
+    if cmds.length > 3
+      msg.send "My help is available here: http://yoshi.servers.somakeit.org.uk/yoshibot/help"
+      return
+    else
+      emit = cmds.join "\n"
 
     unless robot.name.toLowerCase() is 'hubot'
       emit = emit.replace /hubot/ig, robot.name
