@@ -30,7 +30,7 @@ getWikiPage = (msg) ->
     .get() gotURL
 
 module.exports = (robot) ->
-  robot.respond /^wiki (.*)$/i, getWikiPage
+  robot.respond /wiki (.*)$/i, getWikiPage
 
 if require.main is module
   HttpClient = require 'scoped-http-client'
