@@ -62,7 +62,7 @@ module.exports = (robot) ->
         msg.send "No available commands match #{msg.match[1]}"
         return
     if cmds.length > 3
-      msg.send "My help is available here: http://yoshi.servers.somakeit.org.uk/yoshibot/help"
+      msg.send "My help is available here: http://yoshi.servers.somakeit.org.uk:5555/yoshibot/help"
       return
     else
       emit = cmds.join "\n"
